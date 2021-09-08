@@ -1,0 +1,145 @@
+*{
+    /* margin: 0;
+    padding: 0; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    text-transform: capitalize;
+}
+body{
+    background: #000;
+    margin: 0;
+    overflow-x: hidden;
+}
+.first-line {
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    background: #000;
+    border-bottom: 2px solid white;
+    width: 100vw;
+    /* position: relative; */
+}
+
+nav li:hover {
+    transition: all 0.25s ease;
+    color: #474fee;
+}
+
+nav ul, ul{
+    margin: 0;
+}
+
+nav {
+    display: inline-block;
+    list-style-type: none;
+    align-self: center;
+    position: absolute;
+    left: 21em;
+    top: 2em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1.2em;
+    word-spacing: 1.5em;
+}
+
+h1 {
+    margin: 0.2em;
+    margin-left: 1.4em;
+    font-size: 3em;
+    cursor: pointer;
+}
+
+ul {
+    position: absolute;
+    font-size: 1.2em;
+    right: 2em;
+    top: 2em;
+    cursor: pointer;
+    word-spacing: 1em;
+}
+
+.first-line, h1, ul , li{
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #474fee;
+    transition: all 0.25s ease;
+}
+.info{
+    color: #fff;
+    position: absolute;
+}
+.info h1{
+    font-size: 2.7em;
+    margin-top: 1em;
+}
+.info p{
+    opacity: .7;
+    width: 30em;
+    margin-left: 3.5em;
+    line-height: 2em;
+}
+article{   
+    position: absolute;
+    opacity: 0.1;
+    font-size: 170px;
+    font-weight: 500;
+    top: -40px;
+    left: 0;
+    right: 0;
+    color: transparent;
+    text-transform: capitalize;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    z-index: -1;
+    /* width: 100vw; */
+}
+figure{
+    display:inline-block;
+    width:70em;
+    height: max-content;
+    overflow-x: hidden;
+    margin-top: 15em;
+    word-spacing: .5em;
+    line-height: 2em;
+}
+img{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+.img{
+    width: 335px;
+    margin-right: 0%;
+    padding-right: 0;
+    height: 335px;
+    border-radius: 1em;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+.img::before{
+    content: "";
+    background: #474fee;
+    opacity: .7;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: auto;
+    right: 0;
+    transition: all 1s ease-in-out;
+    background-color: transparent;
+    transform: translateX(-100%);
+}
+.img:hover::before{
+    transform: translateX(0);
+}

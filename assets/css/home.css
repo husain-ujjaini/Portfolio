@@ -1,0 +1,117 @@
+*{
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: capitalize;
+}
+.blu-con{
+    background: #3030c7;
+    height: 100vh;
+    width: 30vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.bla-con{
+    background: #000000;
+    height: 100vh;
+    width: 70vw;
+    top: 0;
+    position: absolute;
+    right: 0;
+}
+.first-line{
+    z-index: 1;
+}
+nav li:hover{
+    transition: all 0.25s ease;
+    color: #474fee;
+}
+nav{
+    display: inline-block;
+    list-style-type: none;
+    align-self: center;
+    position: absolute;
+    left: 21em;
+    top: 2em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1.2em;
+    word-spacing: 1.5em;
+}
+h1{
+    margin: 0.2em;
+    margin-left: 1.4em;
+    font-size: 3em;
+    cursor: pointer;
+}
+ul{
+    position: absolute;
+    font-size: 1.2em;
+    right: 2em;
+    top: 2em;
+    cursor: pointer;
+    word-spacing: 1em;
+}
+.first-line, h1, ul{
+    display: inline-block;
+}
+.first-line{
+    width: 100vw;
+    position: relative;
+}
+li{
+    display: inline-block;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #474fee;
+    transition: all 0.25s ease;
+}
+.img{
+    width: 25em;
+    height: 25em;
+    border-radius: 13em;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    left: 8em;
+    top: 5em;
+    border: 10px solid gray;
+}
+.img img{
+    transform: translate(-30%, -23%);
+    filter: saturate(3);
+}
+.info{
+    z-index: 1;
+    color: white;
+    position: absolute;
+    top: 15em;
+    right: 2em;
+}
+.info p{
+    width: 39em;
+    font-size: 1.1em;
+}
+.info button{
+    background: #000;
+    border: 1px solid #fff;
+    width: 10em;
+    height: 3em;
+    border-radius: 3em;
+    /* padding: 10em; */
+    margin-left: 10em;
+    margin-top: 3em;
+    transition: 0.3s ease;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.info button:hover{
+    background: #474fee;
+    border: 1px solid #474fee;
+    transition: 0.3s ease;
+}

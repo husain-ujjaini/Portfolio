@@ -1,0 +1,263 @@
+*{
+    color:white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #000;
+    overflow-x: hidden;
+}
+.first-line{
+    z-index: 1;
+}
+nav li:hover{
+    transition: all 0.25s ease;
+    color: #474fee;
+}
+nav{
+    display: inline-block;
+    list-style-type: none;
+    align-self: center;
+    position: absolute;
+    left: 21em;
+    top: 2em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1.2em;
+    word-spacing: 1.5em;
+}
+.firstline h1{
+    margin: 0.2em;
+    margin-left: 1.4em;
+    font-size: 3em;
+    cursor: pointer;
+}
+ul{
+    position: absolute;
+    font-size: 1.2em;
+    right: 2em;
+    top: 2em;
+    cursor: pointer;
+    word-spacing: 1em;
+    margin: 0;
+}
+.first-line, h1, ul{
+    display: inline-block;
+}
+.first-line{
+    width: 100vw;
+    position: relative;
+}
+li{
+    display: inline-block;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #474fee;
+    transition: all 0.25s ease;
+}
+.head p{
+    position: absolute;
+    top: 10em;
+    left: 2.3em;
+    line-height: 1.7em;
+    opacity: .7;
+    width: 30em;
+}
+.head h2{
+    position: absolute;
+    top: 3em;
+    left: 1em;
+    font-size: 2.3em;
+}
+.main-content{
+    top: 15em;
+    display: flex;
+    width: 70em;
+    justify-content: space-evenly;
+    position: absolute;
+}
+.main-content i{
+    font-size: 1.7em;
+    padding: 1em;
+    width: fit-content;
+    color: #474fee;
+    background: #2b2323;
+    border-radius: 3em;
+}
+.first-box, .second-box, .third-box{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    transition: all .7s ease-in-out;
+    width: 20em;
+    height: 20em;
+    position: relative;
+}
+.main-content h3{
+    position: absolute;
+    top: 10em;
+    left: 5em;
+}
+.main-content p{
+    position: absolute;
+    bottom: 5em;
+    left: 3em;
+    opacity: .7;
+}
+.main-content i{
+    left: 4.5em;
+    top: 1em;
+    position: absolute;
+}
+.second-box p{
+    left: 7em;
+}
+.second-box h3{
+    left: 5.5em;
+}
+.third-box p{
+    left: 7em;
+}
+.third-box h3{
+    left: 6em;
+}
+.first-box:hover, .second-box:hover, .third-box:hover{
+    box-shadow: 0 0 10px 2px #ffffff7a;
+    transform: scale(1.05);
+    transition: all .7s ease-in-out;
+}
+.first-box:hover  i, .second-box:hover  i,.third-box:hover  i{
+    color: #ffffff7a;
+    background: #474fee;
+    transition: all .7s ease-in-out;
+}
+.inputs{
+    position: absolute;
+    bottom: -10em;
+    /* left: 25em; */
+    width: 100%;
+}
+.inline-input{
+    display: flex;
+    width: 100%;
+}
+.inputs input, textarea{
+    background: rgb(19, 18, 18);
+    width: 15em;
+    height: 2em;
+    border-radius: 0;
+    border: 0;
+    outline: none;
+    align-self: flex-start;
+    margin: 1em;
+}
+.inputs input{
+    width: 25em;
+    height: 5em;
+}
+input:focus, textarea:focus{
+    outline: none;
+    border-bottom: 2px solid #474fee;
+    background: #000;
+    transition: all .25s ease-in-out;
+}
+input, textarea{
+    transition: all .25s ease-in-out;
+}
+.bigger-input textarea{
+    width: 98%;
+    height: 8em;
+    margin: 1em;
+}
+::placeholder{
+    font-size: 1.5em;
+    text-align: center;
+    
+}
+button{
+    width: 15em;
+    height: 3em;
+    font-size: 1.2em;
+    padding: .5em;
+    background: #222;
+    border: 1px solid #000;
+    border-radius: 3em;
+    position: absolute;
+    bottom: -13em;
+    left: 2em;
+    transition: 0.5s;
+}
+button:hover{background-color: #474fee; transition: 0.5s;}
+.inline-input input{
+    width: 33%;
+}
+footer{
+    background: #222;
+    height: 10em;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: flex-end;
+    align-items: center;
+    bottom: -36em;
+}
+footer i{
+    margin: 1em;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 5em;
+    transition: .5s ease-in-out;
+    padding: .5em;
+    font-size: 1.2em;
+}
+i.fa.fa-facebook{
+    transition: .5s ease-in-out;
+    background: blue;
+}
+i.fa.fa-twitter{
+    transition: .5s ease-in-out;
+    background: aqua;
+}
+i.fa.fa-google{
+    transition: .5s ease-in-out;
+    background: red;
+}
+i.fa.fa-instagram{
+    transition: .5s ease-in-out;
+    background: rgb(175, 34, 58);
+}
+i.fa.fa-pinterest{
+    transition: .5s ease-in-out;
+    background: darkred;
+}
+i.fa.fa-facebook:hover{
+    color: blue;
+    transition: .5s ease-in-out;
+    background: white;
+}
+i.fa.fa-twitter:hover{
+    color:aqua;
+    transition: .5s ease-in-out;
+    background-color: white;
+}
+i.fa.fa-google:hover{
+    color: red;
+    transition: .5s ease-in-out;
+    background: white;
+}
+i.fa.fa-instagram:hover{
+    color: rgb(175, 34, 58);
+    transition: .5s ease-in-out;
+    background: white;
+}
+i.fa.fa-pinterest:hover{
+    color: darkred;
+    background-color: white;
+    transition: .5s ease-in-out;
+}

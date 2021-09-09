@@ -136,9 +136,10 @@ figure.inner-img{
     height: 335px;
     overflow: hidden;
 }
-/* figure.inner-img img:hover{
-    transform: scale(1.2);
-    width: 335px;
-    height: 335px;
+figure.inner-img img:hover{
+    transform: scale(1.05);
+    filter: brightness(.5);
+    /* width: 335px;
+    height: 335px; */
     transition: all 1s ease;
-} */
+}

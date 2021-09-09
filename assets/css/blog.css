@@ -110,6 +110,7 @@ figure{
     margin-top: 15em;
     word-spacing: .5em;
     line-height: 2em;
+    margin-left: 6em;
 }
 img{
     margin: 0;
@@ -125,21 +126,10 @@ img{
     position: relative;
     z-index: 1;
     cursor: pointer;
+    transition: all .5s ease-in-out;
 }
-.img::before{
-    content: "";
-    background: #474fee;
-    opacity: .7;
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    bottom: 0;
-    left: auto;
-    right: 0;
-    transition: all 1s ease-in-out;
-    background-color: transparent;
-    transform: translateX(-100%);
-}
-.img:hover::before{
-    transform: translateX(0);
+.img:hover{
+    filter: saturate(2) brightness(1.2) hue-rotate(360deg);
+    cursor: zoom-in;
+    transition: all .5s ease-in-out;
 }

@@ -7,9 +7,7 @@
 }
 body{
     background: #000;
-    /* width: 100%;
-    height: max-content;
-    overflow: hidden; */
+    overflow-x: hidden;
 }
 nav li:hover{
     transition: all 0.25s ease;
@@ -73,8 +71,6 @@ article.portfolio{
     text-align: center;
     z-index: -1;
     width: 100vw;
-    /* box-sizing: content-box;
-    box-shadow: inset 0 0 2px 5px white; */
 }
 li{
     padding: 0 1em;
@@ -122,10 +118,7 @@ figure.container{
     display: flex;
     justify-content: space-around;
     align-content: space-around;
-    /* width: 100vw; */
     flex-wrap: wrap;
-    /* overflow: hidden; */
-    /* height: 100vh; */
     margin-top: 10em;
 }
 img{
@@ -137,9 +130,7 @@ figure.inner-img{
     overflow: hidden;
 }
 figure.inner-img img:hover{
-    transform: scale(1.1) translateX(-4.5em);
+    transform: scale(1.01) translateX(-4.5em);
     filter: brightness(.5);
-    /* width: 335px;
-    height: 335px; */
     transition: all 1s ease;
 }

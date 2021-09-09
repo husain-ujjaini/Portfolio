@@ -11,6 +11,9 @@ body{
 }
 .first-line{
     z-index: 1;
+    position: fixed;
+    background: black;
+    border-bottom: 2px solid #fff;
 }
 nav li:hover{
     transition: all 0.25s ease;
@@ -40,15 +43,17 @@ ul{
     right: 2em;
     top: 2em;
     cursor: pointer;
-    word-spacing: 1em;
     margin: 0;
+}
+.my-info span{
+    padding: 0 3em 0 .2em;
 }
 .first-line, h1, ul{
     display: inline-block;
 }
 .first-line{
     width: 100vw;
-    position: relative;
+    position:relative;
 }
 li{
     display: inline-block;
@@ -63,12 +68,17 @@ a:hover{
 .info h1{
     font-size: 2.7em;
 }
-.img-info .img{
+.img-info{
     border: 3px solid #fff;
     width: 20em;
     height: 24em;
+    overflow: hidden;
     transform: translateX(50%);
     border-radius: 2em; 
+}
+
+img{
+    transform: translate(-35%, -23%);
 }
 
 .my-info{

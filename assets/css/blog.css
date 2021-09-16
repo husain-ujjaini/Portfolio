@@ -128,28 +128,28 @@ figure{
     background-repeat: no-repeat;
 }
 .first-img{
-    background: url(D:/Study-Material/portfolio/assets/img/blog-img.jpg);
+    background: url(portfolio/assets/img/blog-img.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 
 }
 .sec-img{
-    background: url(D:/Study-Material/portfolio/assets/img/blog-img2.jpg);
+    background: url(portfolio/assets/img/blog-img2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 .third-img{
-    background: url(D:/Study-Material/portfolio/assets/img/blog-img3.jpg);
+    background: url(portfolio/assets/img/blog-img3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 .forth-img{
-    background: url(D:/Study-Material/portfolio/assets/img/blog-img4.jpg);
+    background: url(portfolio/assets/img/blog-img4.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 .fifth-img{
-    background: url(D:/Study-Material/portfolio/assets/img/blog-img5.jpg);
+    background: url(portfolio/assets/img/blog-img5.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }

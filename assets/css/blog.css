@@ -10,73 +10,62 @@ body{
     margin: 0;
     overflow-x: hidden;
 }
-.first-line {
-    z-index: 2;
-    position: sticky;
-    top: 0;
+.first-line{
+    position: fixed;
     background: #000;
-    border-bottom: 2px solid white;
-    width: 100vw;
-    /* position: relative; */
+    word-wrap: break-word;
+    box-shadow: 0 0 5px 1px;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    width: 100%;
+    z-index: 2;
+    width: 100%;
 }
 
-nav li:hover {
-    transition: all 0.25s ease;
-    color: #474fee;
+.inline{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
-
-nav ul, ul{
-    margin: 0;
-}
-
-nav {
+.first-line li{
     display: inline-block;
     list-style-type: none;
-    align-self: center;
-    position: absolute;
-    left: 21em;
-    top: 2em;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-size: 1.2em;
-    word-spacing: 1.5em;
 }
 
-h1 {
-    margin: 0.2em;
-    margin-left: 1.4em;
-    font-size: 3em;
-    cursor: pointer;
+.first-line h1{
+    margin-left: .2em
 }
 
-ul {
-    position: absolute;
-    font-size: 1.2em;
-    right: 2em;
-    top: 2em;
-    cursor: pointer;
-    word-spacing: 1em;
-}
-
-.first-line, h1, ul , li{
+.first-line ul, .first-line nav{
     display: inline-block;
 }
 
-a {
+.first-line li{
+    padding: 0 .5em;
+}
+.first-line a{
     text-decoration: none;
 }
 
-a:hover {
-    color: #474fee;
-    transition: all 0.25s ease;
+.inline a, .inline li{
+    font-size: 1.1em;
+    transition: all .2s;
+}
+
+.inline a:hover, .inline li:hover{
+    color: #007bff;
+    transition: all .4s;
 }
 .info{
     color: #fff;
-    position: absolute;
+    margin-top: 10em;
 }
 .info h1{
     font-size: 2.7em;
-    margin-top: 1em;
+    margin-left: 1.3em;
 }
 .info p{
     opacity: .7;
@@ -89,7 +78,7 @@ article{
     opacity: 0.1;
     font-size: 170px;
     font-weight: 500;
-    top: -40px;
+    top: 80px;
     left: 0;
     right: 0;
     color: transparent;
@@ -113,13 +102,9 @@ figure{
     margin-top: 15em;
     word-spacing: .5em;
 }
-img{
-    margin: 0;
-    width: 100%;
-    height: 100%;
-}
 .sixth-img, .sec-img, .third-img, .forth-img, .fifth-img{
-    width: 335px;
+    width: 15em;
+    height: 10em;
     margin: 1em;
     padding: 1em;
     display: flex;
@@ -139,21 +124,34 @@ img{
 } */
 .sixth-img{
     background: url(D:/Study-Material/portfolio/assets/img/blog-img6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .first-img{
-    background: url(D:\Study-Material\portfolio\assets\img\blog-img1.jpg);
+    background: url(D:/Study-Material/portfolio/assets/img/blog-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
 .sec-img{
     background: url(D:/Study-Material/portfolio/assets/img/blog-img2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .third-img{
     background: url(D:/Study-Material/portfolio/assets/img/blog-img3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .forth-img{
     background: url(D:/Study-Material/portfolio/assets/img/blog-img4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .fifth-img{
     background: url(D:/Study-Material/portfolio/assets/img/blog-img5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .before::before{
     content: "";
@@ -165,14 +163,23 @@ img{
     top: 0;
     left: 0;
     bottom: 0;
-    transform: translateX(-150%);
+    transform: translateX(150%);
     transition: all 1s ease-out;
 }
 .sixth-img:hover  .before::before, .first-img:hover  .before::before, .sec-img:hover  .before::before, .third-img:hover  .before::before, .forth-img:hover  .before::before, .fifth-img:hover  .before::before{
     transform: translateX(0%);
+    animation: before .5s;
     transition: all 1s ease;
 }
 .sixth-img:focus-within .before::before{
     transform: translateX(20%);
     transition: all 1s ease-in;
+}
+@keyframes before {
+    0%{
+        transform: translateX(-150%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
 }

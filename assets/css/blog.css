@@ -102,7 +102,7 @@ figure{
     margin-top: 15em;
     word-spacing: .5em;
 }
-.sixth-img, .sec-img, .third-img, .forth-img, .fifth-img{
+.first-img, .sixth-img, .sec-img, .third-img, .forth-img, .fifth-img{
     width: 15em;
     height: 10em;
     margin: 1em;
@@ -123,28 +123,28 @@ figure{
     transition: all .5s ease-in-out;
 } */
 .sixth-img{
-    background: url(D:/Study-Material/portfolio/assets/img/blog-img6.jpg);
+    background: url(../img/blog-img6.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 .first-img{
-    background: url(https://github.com/husain-ujjaini/Portfolio/blob/master/assets/img/1.jpg);
+    background: url(../img/blog-img1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 
 }
 .sec-img{
-    background: url(D:/Study-Material/portfolio/assets/img/blog-img2.jpg);
+    background: url(../img/blog-img2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 .third-img{
-    background: url(D:/Study-Material/portfolio/assets/img/blog-img3.jpg);
+    background: url(../img/blog-img3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 .forth-img{
-    background: url(D:/Study-Material/portfolio/assets/img/blog-img4.jpg);
+    background: url(../img/blog-img4.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }

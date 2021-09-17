@@ -9,55 +9,59 @@ body{
     background: #000;
     overflow-x: hidden;
 }
-nav li:hover{
-    transition: all 0.25s ease;
-    color: #474fee;
+.first-line{
+    position: fixed;
+    background: #000;
+    box-shadow: 0 0 5px 1px lightgray;
+    top: 0;
+    left: 0;
+    height: 5em;
+    right: 0;
+    display: flex;
+    width: 100%;
+    z-index: 2;
 }
-nav{
+
+.inline{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.first-line li{
     display: inline-block;
     list-style-type: none;
-    align-self: center;
-    position: absolute;
-    left: 20em;
-    top: 2em;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-size: 1.2em;
 }
-h1{
-    margin: 0.2em;
-    margin-left: 1.4em;
-    font-size: 3em;
-    cursor: pointer;
+
+.first-line h1{
+    margin-left: .2em
 }
-ul{
-    position: absolute;
-    font-size: 1.2em;
-    right: 2em;
-    top: 2em;
-}
-.first-line, h1, ul{
+
+.first-line ul, .first-line nav{
     display: inline-block;
+    margin-right: 2em;
 }
-.first-line{
-    width: 100vw;
-    position: relative;
+
+.first-line li{
+    padding: 0 .5em;
 }
-li{
-    display: inline-block;
-}
-a{
+.first-line a{
     text-decoration: none;
 }
-a:hover{
-    color: #474fee;
-    transition: all 0.25s ease;
+
+.inline a, .inline li{
+    font-size: 1.1em;
+    transition: all .2s;
+}
+
+.inline a:hover, .inline li:hover{
+    color: #007bff;
+    transition: all .4s;
 }
 article.portfolio{
     position: absolute;
     opacity: 0.1;
     font-size: 170px;
-    font-weight: 500;
     top: -40px;
     left: 0;
     right: 0;
@@ -74,63 +78,54 @@ article.portfolio{
 }
 li{
     padding: 0 1em;
+    list-style-type: none;
 }
 p{
     font-size: 1.2em;
     margin-left: 3.2em;
-    opacity: 0.7;
+    color: rgb(168, 164, 164);
     width: 28em;
+    line-height: 2em;
+    margin-top: 2em;
 }
 h2{
     font-size: 2em;
-    margin-top: 2.5em;
+    margin-top: 4em;
     margin-left: 2em;
 }
-p:nth-of-type(1){
-    margin-top: 2em;
+section{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
-p:nth-of-type(2){
-    margin-top: 1em;
+nav.unfixed {
+    display: flex;
+    margin: 5em 0 2em;
+    font-size: 1.1em;
+    cursor: pointer;
 }
-nav.unfixed{
-    left: 2.5em;
-    top: 19em;
+nav.unfixed li:hover{
+    color: #007bff;
+    transition: all .4s;
 }
+
 nav.unfixed li:nth-of-type(1){
-    color: #474fee;
-}
-figure img{
-    width: 300px;
-    height: 290px;
-    border-radius: 0.6em;
-}
-figure img:nth-of-type(1){
-    margin-left: 6em;
-    transform: translate(-26%, 0%);
-}
-figure img:nth-of-type(5){
-    transform: translate(15%, 0);
-}
-figure img:nth-of-type(6){
-    transform: translate(6%, 0);
+    color: #007bff;
 }
 figure.container{
-    display: flex;
+    display: inline-block;
     justify-content: space-around;
-    align-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 10em;
 }
-img{
-    transition: all 1s ease;
-}
-figure.inner-img{
-    width: 335px;   
-    height: 335px;
+.inner-img{
+    height: 17em;
+    width: 18em;
+    border-radius: .6em;
     overflow: hidden;
+    margin: .7em;
+    transition: all 1s;
 }
-figure.inner-img img:hover{
-    transform: scale(1.01) translateX(-4.5em);
-    filter: brightness(.5);
-    transition: all 1s ease;
+.inner-img:hover{
+    transform: scale(1.05);
+    filter: brightness(0.3);
+    transition: all 1s;
 }

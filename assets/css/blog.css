@@ -1,6 +1,4 @@
-*{
-    /* margin: 0;
-    padding: 0; */
+/* *{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
     text-transform: capitalize;
@@ -9,25 +7,25 @@ body{
     background: #000;
     margin: 0;
     overflow-x: hidden;
+    position: relative;
 }
 .first-line{
     position: fixed;
     background: #000;
-    word-wrap: break-word;
     box-shadow: 0 0 5px 1px;
     top: 0;
     left: 0;
     right: 0;
-    display: flex;
-    width: 100%;
     z-index: 2;
     width: 100%;
 }
 
 .inline{
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    justify-content: space-between;
+    height: 4em;
+    justify-content: space-evenly;
     align-items: center;
 }
 .first-line li{
@@ -89,11 +87,11 @@ article{
     margin-right: auto;
     text-align: center;
     z-index: -1;
-    /* width: 100vw; */
+    
 }
 figure{
     display:flex;
-    width:100vw;
+    width: 100vw;
     height: fit-content;
     justify-content: stretch;
     align-content: space-around;
@@ -117,11 +115,6 @@ figure{
     transition: all .5s ease-in-out;
     overflow: hidden;
 }
-/* .sixth-img:hover{
-    filter: saturate(2) brightness(1.2) hue-rotate(360deg);
-    cursor: zoom-in;
-    transition: all .5s ease-in-out;
-} */
 .sixth-img{
     background: url(https://husain-ujjaini.github.io/Portfolio/assets/img/blog-img6.jpg);
     background-size: cover;
@@ -181,5 +174,176 @@ figure{
     }
     100%{
         transform: translateX(0%);
+    }
+} */
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    text-transform: capitalize;
+}
+body{
+    background: #000;
+    position: relative;
+}
+.first-line{
+    position: fixed;
+    background: #000;
+    box-shadow: 1px -1px 5px 1px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    width: 2em;
+    height: 100vh;
+    border-radius: 7em 0 0 7em;
+    align-items: center;
+    transition: all 1s ease;
+}
+.first-line:hover  .inline i{
+    display: none;
+    transition: all 1s ease;
+
+}
+.first-line:hover  .inline h1, .first-line:hover  .inline nav{
+    display: block;
+    transition: all 1s ease;
+}
+.first-line:hover{
+    width: 7.5em;
+    transition: all 1s ease;
+}
+.inline h1, .inline nav{
+    display: none;
+    transition: all 1s ease;
+}
+.inline{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
+    line-height: 7em;
+    position: relative;
+    transition: all 1s ease;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    font-size: 1.5em;
+}
+.info{
+    color: #fff;
+    margin-top: 2em;
+}
+.info h1{
+    font-size: 2.7em;
+    margin-left: .5em;
+}
+.info p{
+    opacity: .7;
+    width: 20em;
+    text-align: justify;
+    margin-left: 1.7em;
+    line-height: 2em;
+}
+
+figure{
+    display:flex;
+    /* width: 100vw; */
+    height: fit-content;
+    justify-content: stretch;
+    align-content: space-around;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    margin-top: 15em;
+    word-spacing: .5em;
+}
+.first-img, .sixth-img, .sec-img, .third-img, .forth-img, .fifth-img{
+    width: 20em;
+    margin: 1em;
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    height: 18em;
+    border-radius: 1em;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    overflow: hidden;
+}
+.sixth-img{
+    background: url(https://husain-ujjaini.github.io/Portfolio/assets/img/blog-img6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.first-img{
+    background: url(https://husain-ujjaini.github.io/Portfolio/assets/img/blog-img1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.sec-img{
+    background: url(https://husain-ujjaini.github.io/Portfolio/assets/img/blog-img2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.third-img{
+    background: url(https://husain-ujjaini.github.io/Portfolio/assets/img/blog-img3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.forth-img{
+    background: url(https://husain-ujjaini.github.io/Portfolio/assets/img/blog-img4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.fifth-img{
+    background: url(https://husain-ujjaini.github.io/Portfolio/assets/img/blog-img5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.before::before{
+    content: "";
+    background: #474fee;
+    opacity: .7;
+    position: absolute;         
+    z-index: -1;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transform: translateX(150%);
+    transition: all 1s ease-out;
+}
+.sixth-img:hover  .before::before, .first-img:hover  .before::before, .sec-img:hover  .before::before, .third-img:hover  .before::before, .forth-img:hover  .before::before, .fifth-img:hover  .before::before{
+    transform: translateX(0%);
+    animation: before .5s;
+    transition: all 1s ease;
+}
+.sixth-img:focus-within .before::before{
+    transform: translateX(20%);
+    transition: all 1s ease-in;
+}
+@keyframes before {
+    0%{
+        transform: translateX(-150%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+} 
+@media screen and (max-width:390px) {
+    .info p{
+        width: 15em;
+    }
+}
+@media screen and (max-width:314px) {
+    .info p{
+        width:8em;
     }
 }

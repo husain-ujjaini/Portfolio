@@ -1,181 +1,3 @@
-/* *{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white;
-    text-transform: capitalize;
-}
-body{
-    background: #000;
-    margin: 0;
-    overflow-x: hidden;
-    position: relative;
-}
-.first-line{
-    position: fixed;
-    background: #000;
-    box-shadow: 0 0 5px 1px;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    width: 100%;
-}
-
-.inline{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 4em;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.first-line li{
-    display: inline-block;
-    list-style-type: none;
-}
-
-.first-line h1{
-    margin-left: .2em
-}
-
-.first-line ul, .first-line nav{
-    display: inline-block;
-}
-
-.first-line li{
-    padding: 0 .5em;
-}
-.first-line a{
-    text-decoration: none;
-}
-
-.inline a, .inline li{
-    font-size: 1.1em;
-    transition: all .2s;
-}
-
-.inline a:hover, .inline li:hover{
-    color: #007bff;
-    transition: all .4s;
-}
-.info{
-    color: #fff;
-    margin-top: 10em;
-}
-.info h1{
-    font-size: 2.7em;
-    margin-left: 1.3em;
-}
-.info p{
-    opacity: .7;
-    width: 30em;
-    margin-left: 3.5em;
-    line-height: 2em;
-}
-article{   
-    position: absolute;
-    opacity: 0.1;
-    font-size: 170px;
-    font-weight: 500;
-    top: 80px;
-    left: 0;
-    right: 0;
-    color: transparent;
-    text-transform: capitalize;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    z-index: -1;
-    
-}
-figure{
-    display:flex;
-    width: 100vw;
-    height: fit-content;
-    justify-content: stretch;
-    align-content: space-around;
-    flex-wrap: wrap;
-    overflow-x: hidden;
-    margin-top: 15em;
-    word-spacing: .5em;
-}
-.first-img, .sixth-img, .sec-img, .third-img, .forth-img, .fifth-img{
-    width: 15em;
-    height: 10em;
-    margin: 1em;
-    padding: 1em;
-    display: flex;
-    flex-wrap: wrap;
-    height: 335px;
-    border-radius: 1em;
-    position: relative;
-    z-index: 1;
-    cursor: pointer;
-    transition: all .5s ease-in-out;
-    overflow: hidden;
-}
-.sixth-img{
-    background: url(https://husain-ujjaini.github.io/Portfolio/assets/img/blog-img6.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.first-img{
-    background: url(https://husain-ujjaini.github.io/Portfolio/assets/img/blog-img1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-
-}
-.sec-img{
-    background: url(https://husain-ujjaini.github.io/Portfolio/assets/img/blog-img2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.third-img{
-    background: url(https://husain-ujjaini.github.io/Portfolio/assets/img/blog-img3.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.forth-img{
-    background: url(https://husain-ujjaini.github.io/Portfolio/assets/img/blog-img4.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.fifth-img{
-    background: url(https://husain-ujjaini.github.io/Portfolio/assets/img/blog-img5.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.before::before{
-    content: "";
-    background: #474fee;
-    opacity: .7;
-    position: absolute;         
-    z-index: -1;
-    right: 0;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    transform: translateX(150%);
-    transition: all 1s ease-out;
-}
-.sixth-img:hover  .before::before, .first-img:hover  .before::before, .sec-img:hover  .before::before, .third-img:hover  .before::before, .forth-img:hover  .before::before, .fifth-img:hover  .before::before{
-    transform: translateX(0%);
-    animation: before .5s;
-    transition: all 1s ease;
-}
-.sixth-img:focus-within .before::before{
-    transform: translateX(20%);
-    transition: all 1s ease-in;
-}
-@keyframes before {
-    0%{
-        transform: translateX(-150%);
-    }
-    100%{
-        transform: translateX(0%);
-    }
-} */
 *{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
@@ -195,29 +17,38 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1;
+    z-index: 2;
     width: 2em;
     height: 100vh;
     border-radius: 7em 0 0 7em;
     align-items: center;
-    transition: all 1s ease;
-}
-.first-line:hover  .inline i{
-    display: none;
-    transition: all 1s ease;
-
-}
-.first-line:hover  .inline h1, .first-line:hover  .inline nav{
-    display: block;
+    cursor: pointer;
     transition: all 1s ease;
 }
 .first-line:hover{
-    width: 7.5em;
-    transition: all 1s ease;
+    width: 10em;
+    transition: all .5s ease;
+}
+.first-line:hover  .inline i{
+    font-size: 0%;
+    transition: all .7s ease;
+
+}
+.first-line:hover  .inline nav{
+    font-size: 1.5em;
+    font-weight: 400;
+    transition: all .5s ease;
+}
+.first-line:hover  .inline h1 {
+    font-size: 2.5em;
+}
+.first-line a:hover{
+    color: aqua;
+    transition: all .7s;
 }
 .inline h1, .inline nav{
-    display: none;
-    transition: all 1s ease;
+    font-size: 0%;
+    transition: all .3s ease;
 }
 .inline{
     display: flex;
@@ -226,14 +57,15 @@ body{
     align-items: center;
     line-height: 7em;
     position: relative;
-    transition: all 1s ease;
+    transition: all .7s ease;
 }
-li{
+.first-line li{
     list-style-type: none;
 }
-a{
+.first-line a{
     text-decoration: none;
     font-size: 1.5em;
+    transition: all .5s;
 }
 .info{
     color: #fff;
@@ -253,7 +85,6 @@ a{
 
 figure{
     display:flex;
-    /* width: 100vw; */
     height: fit-content;
     justify-content: stretch;
     align-content: space-around;
@@ -309,7 +140,7 @@ figure{
 }
 .before::before{
     content: "";
-    background: #474fee;
+    background: rgba(0, 255, 255, 0.514);
     opacity: .7;
     position: absolute;         
     z-index: -1;

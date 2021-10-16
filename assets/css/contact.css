@@ -1,92 +1,111 @@
-*{
-    color:white;
+* {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
     text-transform: capitalize;
-    margin: 0;
-    padding: 0;
-}
-body{
-    background: #000;
-    overflow-x: hidden;
-}
-.first-line{
-    position: fixed;
-    background: #000;
     word-wrap: break-word;
-    box-shadow: 0 0 5px 1px;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    width: 100%;
-    z-index: 2;
-    width: 100%;
-    height: 5em;
 }
 
-.inline{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
+body {
+    background: #000;
+    position: relative;
 }
-.first-line li{
-    display: inline-block;
+
+.first-line {
+    position: fixed;
+    background: #000;
+    box-shadow: 1px -1px 5px 1px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    width: 2em;
+    height: 100vh;
+    border-radius: 7em 0 0 7em;
+    align-items: center;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.first-line:hover {
+    width: 10em;
+    transition: all .5s ease;
+}
+
+.first-line:hover .inline i {
+    font-size: 0%;
+    transition: all .7s ease;
+}
+
+.first-line:hover .inline nav {
+    font-size: 1.5em;
+    font-weight: 400;
+    transition: all .5s ease;
+}
+
+.first-line:hover .inline h1 {
+    font-size: 3em;
+}
+
+.first-line a:hover {
+    color: aqua;
+    transition: all .7s;
+}
+
+.inline h1, .inline nav {
+    font-size: 0%;
+    transition: all .3s ease;
+}
+
+.inline {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
+    line-height: 7em;
+    position: relative;
+    transition: all .7s ease;
+}
+
+.first-line li {
     list-style-type: none;
 }
 
-.first-line h1{
-    margin-left: .2em
-}
-
-.first-line ul, .first-line nav{
-    display: inline-block;
-}
-
-.first-line li{
-    padding: 0 .5em;
-}
-.first-line a{
+.first-line a {
     text-decoration: none;
+    font-size: 1.5em;
+    transition: all .5s;
+}
+.head {
+    margin: 0 0 2em 1em;
 }
 
-.inline a, .inline li{
-    font-size: 1.1em;
-    transition: all .2s;
-}
-
-.inline a:hover, .inline li:hover{
-    color: #007bff;
-    transition: all .4s;
-}
-
-.head{
-    margin: 8em 0 2em 2em;
-}
-
-.head p{
+.head p {
     line-height: 2em;
     color: lightgray;
-    width: 20em;
 }
-.head h2{
+
+.head h2 {
     margin-bottom: 1em;
     font-size: 2.3em;
 }
-.main-content{
+.main-content {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
 }
-.main-content i{
+
+.main-content i {
     font-size: 1.2em;
     padding: 1em;
     width: fit-content;
     color: #007bff;
     background: #2b2323;
     border-radius: 3em;
-}
-.first-box, .second-box, .third-box{
+} 
+.box {
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -96,99 +115,107 @@ body{
     transition: all .7s ease-in-out;
     width: 25%;
     line-height: 3em;
-    height: 33.33%;
 }
-.main-content p{
+
+.main-content   a {
     color: lightgray;
 }
-.first-box:hover, .second-box:hover, .third-box:hover{
+
+.box:hover {
     box-shadow: 0 0 10px 2px rgba(255, 250, 250, 0.452);
     transform: translateY(-9px);
     transition: all .7s ease-in-out;
 }
-.first-box:hover  i, .second-box:hover  i,.third-box:hover  i{
+
+.box:hover i {
     color: rgba(255, 255, 255, 0.685);
     background: #007bff;
     transition: all .7s ease-in-out;
 }
 
-.touched-head{
+.touched-head {
     font-size: 2.1em;
-    margin: 2em 0 1.5em 1em;
+    justify-content: center;
+    display: flex;
 }
 
-.touched-head h3{
+.touched-head h3 {
     border-bottom: .5em solid #007bff6b;
     width: fit-content;
 }
 
-.inputs{
-    width: 100%;
+.inputs {
+    width: fit-content;
 }
-.inline-input{
+
+.inline-input {
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
 }
-.inputs input, textarea{
+
+.inputs input, textarea {
     background: rgb(19, 18, 18);
-    width: 15em;
-    height: 2em;
     border-radius: .5em;
     border: 0;
     outline: none;
     align-self: flex-start;
+    align-items: flex-start;
     margin: 1em;
-}
-.inputs input{
-    width: 25em;
+    width: 29vw;
     height: 5em;
+    transition: all .5s ease-in-out;
 }
-input:focus, textarea:focus{
+
+input:focus, textarea:focus {
     outline: none;
     border-bottom: 2px solid #007bff;
     background: #000;
     transition: all .25s ease-in-out;
 }
-input, textarea{
-    transition: all .25s ease-in-out;
-}
-.bigger-input textarea{
-    width: 97.4%;
+
+.bigger-input textarea {
+    width: 87vw;
     height: 8em;
-    margin: 1em;
 }
-::placeholder{
+
+::placeholder {
     font-size: 1.5em;
     text-align: center;
-    
+    justify-self: flex-start;
 }
-button{
-    /* width: 15em;
-    height: 3em; */
-    font-size: 1.2em;
-    padding: 1em 2em;
+
+.inline-input span{
+    display: none;
+}
+
+button {
+    font-size: 1.15em;
+    padding: 1em;
     background: #222;
     border: 1px solid rgba(255, 250, 250, 0.452);
     cursor: pointer;
     border-radius: 2.5em;
     transition: 0.5s;
-    margin: 0  0 .5em 3em;
+    margin: 0 0 .5em 2em;
 }
-button:hover{
+
+button:hover {
     background-color: #007bff;
     transition: 0.5s;
 }
 
-footer{
+footer {
     background: #222;
     height: 10em;
-    width: 100%;
+    width: 95vw;
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
     align-items: flex-end;
 }
 
-footer i{
+footer i {
     margin: 1em;
     color: white;
     width: 20px;
@@ -198,56 +225,58 @@ footer i{
     padding: .5em;
     font-size: 1.2em;
 }
-i.fa.fa-facebook{
+
+i.fa.fa-facebook {
     transition: .5s ease-in-out;
     background: blue;
 }
-i.fa.fa-twitter{
+
+i.fa.fa-twitter {
     transition: .5s ease-in-out;
     background: aqua;
 }
-i.fa.fa-google{
+
+i.fa.fa-google {
     transition: .5s ease-in-out;
     background: red;
 }
-i.fa.fa-instagram{
+
+i.fa.fa-instagram {
     transition: .5s ease-in-out;
     background: rgb(175, 34, 58);
 }
-i.fa.fa-pinterest{
+
+i.fa.fa-pinterest {
     transition: .5s ease-in-out;
     background: darkred;
 }
-i.fa.fa-facebook:hover{
+
+i.fa.fa-facebook:hover {
     color: blue;
     transition: .5s ease-in-out;
     background: white;
 }
-i.fa.fa-twitter:hover{
-    color:aqua;
+
+i.fa.fa-twitter:hover {
+    color: aqua;
     transition: .5s ease-in-out;
     background-color: white;
 }
-i.fa.fa-google:hover{
+
+i.fa.fa-google:hover {
     color: red;
     transition: .5s ease-in-out;
     background: white;
 }
-i.fa.fa-instagram:hover{
+
+i.fa.fa-instagram:hover {
     color: rgb(175, 34, 58);
     transition: .5s ease-in-out;
     background: white;
 }
-i.fa.fa-pinterest:hover{
+
+i.fa.fa-pinterest:hover {
     color: darkred;
     background-color: white;
     transition: .5s ease-in-out;
-}
-@media screen and (min-width:220px) and (max-width:550px) {
-    .first-line{
-        font-size: .9em;
-    }
-    .head p{
-        width: 20em;
-    }
 }

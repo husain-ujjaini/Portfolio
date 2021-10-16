@@ -7,69 +7,75 @@
 }
 .blu-con{
     background: #3030c7;
-    height: 100%;
-    width: 40%;
+    height: 100vh;
+    width: 40vw;
     position: absolute;
     top: 0;
     left: 0;
 }
-.bla-con{
-    background: #000000;
-    height: 100%;
-    width: 90%;
-    top: 0;
-    position: absolute;
-    right: 0;
+body{
+    background: #000;
+    position: relative;
 }
 .first-line{
     position: fixed;
     background: #000;
-    word-wrap: break-word;
-    box-shadow: 0 0 5px 1px;
-    top: 0;
-    left: 0;
+    box-shadow: 1px -1px 5px 1px;
     right: 0;
+    top: 0;
+    bottom: 0;
     display: flex;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
     z-index: 2;
-    width: 100%;
-    height: 5em;
+    width: 2em;
+    height: 100vh;
+    border-radius: 7em 0 0 7em;
+    align-items: center;
+    cursor: pointer;
+    transition: all 1s ease;
 }
+.first-line:hover{
+    width: 10em;
+    transition: all .5s ease;
+}
+.first-line:hover  .inline i{
+    font-size: 0%;
+    transition: all .7s ease;
 
+}
+.first-line:hover  .inline nav{
+    font-size: 1.5em;
+    font-weight: 400;
+    transition: all .5s ease;
+}
+.first-line:hover  .inline h1 {
+    font-size: 2.5em;
+}
+.first-line a:hover{
+    color: aqua;
+    transition: all .7s;
+}
+.inline h1, .inline nav{
+    font-size: 0%;
+    transition: all .3s ease;
+}
 .inline{
     display: flex;
-    width: 100%;
-    justify-content: space-between;
+    flex-direction: column;
+    height: fit-content;
     align-items: center;
+    line-height: 7em;
+    position: relative;
+    transition: all .7s ease;
 }
 .first-line li{
-    display: inline-block;
     list-style-type: none;
-}
-
-.first-line h1{
-    margin-left: .2em
-}
-
-.first-line ul, .first-line nav{
-    display: inline-block;
-}
-
-.first-line li{
-    padding: 0 .5em;
 }
 .first-line a{
     text-decoration: none;
-}
-
-.inline a, .inline li{
-    font-size: 1.1em;
-    transition: all .2s;
-}
-
-.inline a:hover, .inline li:hover{
-    color: #007bff;
-    transition: all .4s;
+    font-size: 1.5em;
+    transition: all .5s;
 }
 
 .img{
@@ -81,9 +87,8 @@
 }
 
 .info{
-    position: absolute;
-    left: 0;
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     align-items: center;
     transform: translateY(20%);
@@ -96,8 +101,8 @@
 }
 
 .real-info p{
+    text-align: justify;
     width: 25em;
-    margin: 1em 0;
 }
 
 .info button{
@@ -114,7 +119,7 @@
     transition: all 1s;
     color: rgb(236, 233, 233);
 }
-
+/* 
 @media screen and (min-width: 250px) and (max-width:350px) {
     .img{
         width: 10em;
@@ -160,4 +165,4 @@
     .info p{
         width: 20em;
     }
-}
+} */

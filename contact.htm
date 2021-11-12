@@ -65,6 +65,20 @@
         <i class="fa fa-instagram"></i>
         <i class="fa fa-pinterest"></i>
     </footer>
+    <script>
+        let textArea = document.getElementById('blame')
+        
+        textArea.addEventListener('keypress', (e)=>{
+            if(e.key == 'Enter'){
+                let inputs = document.querySelectorAll('input')
+                for(let input of inputs){
+                    input.value = ''
+                    textArea.value = ''
+                console.log(input.value,textArea.value)
+                }
+            }
+        })
+    </script>
 </body>
 
 </html>

@@ -1,13 +1,16 @@
-*{
+* {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    word-wrap: break-word;
     color: white;
     text-transform: capitalize;
 }
-body{
+
+body {
     background: #000;
     position: relative;
 }
-.first-line{
+
+.first-line {
     position: fixed;
     background: #000;
     box-shadow: 1px -1px 5px 1px;
@@ -20,51 +23,41 @@ body{
     z-index: 2;
     width: 2em;
     height: 100vh;
-    border-radius: 7em 0 0 7em;
+    border-radius: 30% 0 0 30%;
     align-items: center;
     cursor: pointer;
     transition: all 1s ease;
 }
-.first-line:hover{
-    width: 10em;
+
+.inline {
+    line-height: 13vh;
+    /* position: relative; */
+    font-size: 0;
+    transition: all .7s ease;
+}
+
+.first-line:hover {
+    width: 8em;
     transition: all .5s ease;
 }
-.first-line:hover  .inline i{
-    font-size: 0%;
-    transition: all .7s ease;
 
-}
-.first-line:hover  .inline nav{
-    font-size: 1.5em;
+.first-line:hover .inline {
+    font-size: 1.2em;
     font-weight: 400;
     transition: all .5s ease;
 }
-.first-line:hover  .inline h1 {
-    font-size: 2.5em;
-}
-.first-line a:hover{
+
+.first-line a:hover {
     color: aqua;
     transition: all .7s;
 }
-.inline h1, .inline nav{
-    font-size: 0%;
-    transition: all .3s ease;
-}
-.inline{
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
-    align-items: center;
-    line-height: 7em;
-    position: relative;
-    transition: all .7s ease;
-}
-.first-line li{
+
+.first-line li {
     list-style-type: none;
 }
-.first-line a{
+
+.first-line a {
     text-decoration: none;
-    font-size: 1.5em;
     transition: all .5s;
 }
 .info{

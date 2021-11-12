@@ -61,6 +61,22 @@ body {
     transition: all .5s;
 }
 
+.blu-con{
+    background: aquamarine;
+    height: 100vh;
+    width: 25vw;
+    position: absolute;
+    top: 0%;
+}
+
+.blu-con{
+    background: #000;
+    height: 100vh;
+    width: 75vw;
+    position: absolute;
+    top: 0%;
+}
+
 .img{
     width: 20em;
     height: 22em;
